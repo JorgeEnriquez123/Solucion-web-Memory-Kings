@@ -6,8 +6,6 @@ package com.example.memorykings.entity.base;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,8 +22,6 @@ public class BaseCredencialesEntity {
     private String nombre;
     
     @Column(name = "dni", nullable = false)
-    @NotEmpty(message = "Debe de ingresar el DNI")
-    @Size(min = 8, max = 8, message = "El DNI debe tener 8 caracteres")
     private String dni;
     
     @Column(name = "email", nullable = false)
