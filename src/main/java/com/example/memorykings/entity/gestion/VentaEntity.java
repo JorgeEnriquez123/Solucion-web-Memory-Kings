@@ -10,6 +10,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -36,8 +37,8 @@ public class VentaEntity extends BaseEstadoEntity implements Serializable{
     @JoinColumn(name = "cliente_id")
     private ClienteEntity cliente;
     
-    @Column(name="fecha")
-    private Date fecha;
+    @Column(name="fecha", columnDefinition = "DATE")
+    private LocalDate fecha;
     
     @Column(name="total")
     private Double total;

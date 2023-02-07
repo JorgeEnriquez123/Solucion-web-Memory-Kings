@@ -5,12 +5,17 @@
 package com.example.memorykings.service.gestion;
 
 import com.example.memorykings.entity.gestion.CarritoDeComprasEntity;
-import com.example.memorykings.service.generic.GenericoService;
+import java.util.List;
+import java.util.Optional;
 
 /**
  *
  * @author josep
  */
-public interface CarritoDeComprasService extends GenericoService<CarritoDeComprasEntity>{
-    
+public interface CarritoDeComprasService{
+    List<CarritoDeComprasEntity> findAll();
+    CarritoDeComprasEntity add(CarritoDeComprasEntity t);
+    Optional<CarritoDeComprasEntity> findById(long id);
+    CarritoDeComprasEntity update(CarritoDeComprasEntity t);
+    boolean deletebyid(long id);
 }
